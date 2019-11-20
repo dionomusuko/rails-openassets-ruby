@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+$:.unshift( File.expand_path("../../lib", __FILE__) )
+require 'bitcoin'
+
+include Bitcoin
+include Bitcoin::Util
+
+Bitcoin.network = ARGV.shift || :bitcoin
+
+require 'irb'
+require 'irb/completion'
+IRB.start

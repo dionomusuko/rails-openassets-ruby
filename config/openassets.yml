@@ -1,0 +1,38 @@
+# README: https://github.com/haw-itn/openassets-ruby#configuration
+default: &default
+  network:  mainnet
+  provider: bitcoind
+  cache:    tmp/cache/openassets.db
+  dust_limit: 600
+  default_fees: 10000
+  min_confirmation: 1
+  max_confirmation: 9999999
+  rpc: &rpc
+    <span style="color: #d32f2f">user:     bitcoinrpc</span>
+    <span style="color: #d32f2f">password: rpcpassword</span>
+    schema:   http
+    <span style="color: #d32f2f">port:     8332</span>
+    host:     localhost
+
+mainnet: &mainnet
+  <<: *default
+
+testnet: &testnet
+  <<: *default
+  network: testnet
+  rpc:
+    <<: *rpc
+    port: 18332
+
+regtest: &regtest
+  <<: *testnet
+  network: regtest
+
+development:
+  <<: *regtest
+
+test:
+  <<: *regtest
+
+production:
+  <<: *mainnet
