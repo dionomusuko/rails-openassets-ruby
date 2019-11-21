@@ -8,8 +8,8 @@ default: &default
   min_confirmation: 1
   max_confirmation: 9999999
   rpc: &rpc
-    user:     ENV['RPCUSER']
-    password: ENV['RPCPASSWORD']
+    user:     <%= ENV['RPCUSER'] %>
+    password: <%= ENV['RPCPASSWORD'] %>
     schema:   http
     port:     18332
     host:     localhost
