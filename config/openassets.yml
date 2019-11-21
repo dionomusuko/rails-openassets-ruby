@@ -8,10 +8,10 @@ default: &default
   min_confirmation: 1
   max_confirmation: 9999999
   rpc: &rpc
-    <span style="color: #d32f2f">user:     bitcoinrpc</span>
-    <span style="color: #d32f2f">password: rpcpassword</span>
+    user:     ENV['RPCUSER']
+    password: ENV['RPCPASSWORD']
     schema:   http
-    <span style="color: #d32f2f">port:     8332</span>
+    port:     18332
     host:     localhost
 
 mainnet: &mainnet
