@@ -19,7 +19,7 @@ gem 'uglifier', '>= 1.3.0'
 # bitcoin
 gem 'openassets-ruby'
 gem 'bitcoin-ruby'
-gem 'ffi', '1.9.18'
+gem 'ffi', '1.9.24'
 gem 'dotenv-rails'
 
 # Use CoffeeScript for .coffee assets and views
